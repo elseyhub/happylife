@@ -1,2 +1,2 @@
-# happylife
-Portfolio website for Happy Life 
+# Happy Life Brand Website
+
