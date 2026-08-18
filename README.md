@@ -1,4 +1,3 @@
-# Happy Life Brand Website
 # 🌱 HappyLife
 
 > Empowering young people through mentorship, motivation, personal development, and opportunities.
