@@ -1,4 +1,4 @@
-LICENSE
+https://github.com/elseyhub/happylife/blob/6461de9087fa84915974ee1d8bb832ce7f330dc0/LICENSE
 # 🌱 HappyLife
 
 > Empowering young people through mentorship, motivation, personal development, and opportunities.
