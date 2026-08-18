@@ -6,7 +6,7 @@ HappyLife is a youth-focused platform designed to inspire, educate, and empower 
 
 ## 🌐 Website
 
-🔗 **Live Website:** []
+🔗 **Live Website:** [happylife-sigma.vercel.app]
 
 ## ✨ Features
 
