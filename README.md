@@ -43,7 +43,7 @@ happylife/
 │   └── script.js
 │
 ├── images/
-│   └── ...
+│   └── happylife logo.jpeg
 │
 ├── assets/
 │   └── ...
