@@ -34,6 +34,7 @@ happylife/
 │
 ├── index.html
 ├── about.html
+├── services.html
 ├── contact.html
 │
 ├── css/
@@ -43,7 +44,7 @@ happylife/
 │   └── script.js
 │
 ├── images/
-│   └── happylife logo.jpeg
+│   └── ...
 │
 ├── assets/
 │   └── ...
