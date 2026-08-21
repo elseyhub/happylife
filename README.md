@@ -126,7 +126,7 @@ git push origin feature/your-feature-name
 ## 📬 Connect With Us
 
 * TikTok: [https://www.tiktok.com/@happyspeakers](https://www.tiktok.com/@happyspeakers)
-* Email: [your@email.com](mailto:happylifementors@email.com)
+* Email: [happylifementors@gmail.com](mailto:happylifementors@email.com)
 
 ## 📄 License
 
