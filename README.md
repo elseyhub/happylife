@@ -71,7 +71,6 @@ npm install
 npm run dev
 ```
 
-Or open the `index.html` file directly in your browser if the project uses only HTML, CSS, and JavaScript.
 
 ## 📁 Project Structure
 
@@ -90,10 +89,10 @@ happylife/
 │   └── script.js
 │
 ├── images/
-│   └── ...
+│   └── happylife logo.jpeg
 │
 ├── assets/
-│   └── ...
+│   └── svg
 │
 ├── .gitignore
 └── README.md
