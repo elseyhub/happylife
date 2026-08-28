@@ -94,7 +94,7 @@ happylife/
 ├── assets/
 │   └── svg
 │
-├── .gitignore
+├── MIT License
 └── README.md
 
 ## 🤝 Contributing
