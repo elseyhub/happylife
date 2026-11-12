@@ -33,54 +33,12 @@ The website serves as a central hub where visitors can:
 - **Git & GitHub** – Version control
 - **Vercel** – Deployment
 
-## 🚀 Getting Started
-
-Follow these steps to run the project locally.
-
-### Prerequisites
-
-Make sure you have installed:
-
-* A modern web browser
-* Git
-* Node.js and npm *(if using a JavaScript framework)*
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/elseyhub/happylife-website.git
-```
-
-2. Navigate to the project folder:
-
-```bash
-cd happylife
-```
-
-3. Install dependencies *(if applicable)*:
-
-```bash
-npm install
-```
-
-4. Start the development server:
-
-```bash
-npm run dev
-```
-
-
 ## 📁 Project Structure
 
 ```text
 happylife/
 │
 ├── index.html
-├── about.html
-├── services.html
-├── contact.html
 │
 ├── css/
 │   └── style.css
