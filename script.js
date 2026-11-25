@@ -79,26 +79,64 @@ const statObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
 
 // ===== FORM SUBMIT =====
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  const success = document.getElementById('formSuccess');
+let form = document.querySelector("#contactForm");
+  let nameInput = document.querySelector("#name");
+  let contactInput = document.querySelector("#contact");
+  let subjectInput = document.querySelector("#subject");
+  let msgInput = document.querySelector("#msg");
+  let messageEl = document.querySelector("#message");
+  let charCount = document.querySelector("#charCount");
+  let savedList = document.querySelector("#savedList");
 
-  btn.textContent = 'Sending...';
-  btn.style.opacity = '0.7';
+  // Load saved messages
+  let messages = JSON.parse(localStorage.getItem("contact_messages")) || [];
+  showMessages();
 
-  setTimeout(() => {
-    btn.textContent = '✓ Message Sent!';
-    btn.style.opacity = '1';
-    success.style.display = 'block';
-    e.target.reset();
+  // Live character count
+  msgInput.addEventListener("input", () => {
+    charCount.textContent = `${msgInput.value.length} / 200 characters`;
+  });
 
-    setTimeout(() => {
-      btn.textContent = 'Send My Message ✦';
-      success.style.display = 'none';
-    }, 4000);
-  }, 1500);
-}
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // STOP refresh
+
+    let name = nameInput.value.trim();
+    let contact = contactInput.value.trim();
+    let subject = subjectInput.value;
+    let msg = msgInput.value.trim();
+
+    // Clear old errors
+    [nameInput, contactInput, msgInput].forEach(i => i.classList.remove("error"));
+
+    // 1. VALIDATION
+    if (name === "" || contact === "" || msg === "") {
+      messageEl.textContent = "❌ Please fill all required fields";
+      messageEl.style.color = "red";
+      if (name === "") nameInput.classList.add("error");
+      if (contact === "") contactInput.classList.add("error");
+      if (msg === "") msgInput.classList.add("error");
+      return;
+    }
+
+    if (msg.length < 10) {
+      messageEl.textContent = "❌ Message too short - write at least 10 characters";
+      messageEl.style.color = "red";
+      msgInput.classList.add("error");
+      return;
+    }
+
+    // 2. SAVE TO LOCALSTORAGE
+    let newMsg = { name, contact, subject, msg, date: new Date().toLocaleString() };
+    messages.push(newMsg);
+    localStorage.setItem("contact_messages", JSON.stringify(messages));
+    showMessages();
+
+    // 3. SHOW SUCCESS
+    messageEl.textContent = `✅ Thanks ${name}! Message sent. We will reply to ${contact}`;
+    messageEl.style.color = "green";
+    form.reset();
+    charCount.textContent = "0 / 200 characters";
+
 //send via whatsapp 
  let whatsappText = `Hello, I'm ${name}. Subject: ${subject}. Message: ${msg}. My contact: ${contact}`;
     let whatsappUrl = `https://wa.me/254791171945?text=${encodeURIComponent(whatsappText)}`;
