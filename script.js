@@ -99,6 +99,22 @@ function handleSubmit(e) {
     }, 4000);
   }, 1500);
 }
+//send via whatsapp 
+ let whatsappText = `Hello, I'm ${name}. Subject: ${subject}. Message: ${msg}. My contact: ${contact}`;
+    let whatsappUrl = `https://wa.me/254791171945?text=${encodeURIComponent(whatsappText)}`;
+    // auto-open WhatsApp:
+     window.open(whatsappUrl, "_blank");
+    console.log("WhatsApp Link:", whatsappUrl);
+  });
+
+  function showMessages() {
+    savedList.innerHTML = "";
+    messages.slice(-3).reverse().forEach(m => {
+      let li = document.createElement("li");
+      li.textContent = `${m.name} - ${m.subject}: ${m.msg.slice(0, 50)}...`;
+      savedList.appendChild(li);
+    });
+  }
 
 // ===== SMOOTH ACTIVE NAV =====
 const sections = document.querySelectorAll('section[id]');
